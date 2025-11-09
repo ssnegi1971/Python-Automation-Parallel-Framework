@@ -1,0 +1,18 @@
+USE [NorthWind]
+GO
+
+/****** Object:  Table [dbo].[ETL_Job_Runs]    Script Date: 7/11/2025 10:01:52 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ETL_Job_Runs](
+	[SerialNo] [int] IDENTITY(1,1) NOT NULL,
+	[JobName] [varchar](40) NULL,
+	[RunTime] [datetime] NULL,
+	[JobStatus] [varchar](20) NULL,
+	[ErrorMsg] [varchar](100) NULL
+) ON [PRIMARY]
+GO
