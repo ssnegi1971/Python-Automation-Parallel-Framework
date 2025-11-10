@@ -16,4 +16,7 @@ CREATE TABLE [dbo].[ETL_Job_Runs](
 	[ErrorMsg] [varchar](100) NULL,
 	[JobOrder] int
 ) ON [PRIMARY]
+
 GO
+
+insert into dbo.etl_job_runs values('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/SQLAlchemyPandasPythonProcedure.py','','Ready','',1);
