@@ -10,7 +10,8 @@ import os
 
 def run_script(script_name, param1, param2):
     subprocess.run(["python", script_name, param1, param2]);
-
+#the below setting can be changed for more parallel jobs.
+#Also the pythonAutomationJobs.py will have to be changed for more parallelism.
 noparalleljobs = "5";
 
 if __name__ == "__main__":
