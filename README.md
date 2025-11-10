@@ -24,6 +24,13 @@ When all the jobs running in parallel have finished it stops.
 
 Then it processes the next jobs file from the Main program.
 
-Multiple Main programs can be invoked for different data sources, example warehouses. 
+The jobs in the database repository are run in a specified job order to handle dependency.
+
+The framework has been designed for 5 parrallel jobs at a time but can be expanded to more parallel jobs.
+
+Multiple Main programs can be invoked for different data sources, example warehouses.
+
+
+
 
 
