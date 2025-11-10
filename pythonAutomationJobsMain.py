@@ -11,10 +11,12 @@ import os
 def run_script(script_name, param1, param2):
     subprocess.run(["python", script_name, param1, param2]);
 
+noparalleljobs = "5";
+
 if __name__ == "__main__":
-    script_thread1 = threading.Thread(target=run_script, args=("C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/SQLAlchemyPandasPythonProcedureFetchJobs.py","","",));
+    script_thread1 = threading.Thread(target=run_script, args=("C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/SQLAlchemyPandasPythonProcedureFetchJobs.py",noparalleljobs,"",));
     script_thread1.start();
-    script_thread1.join();
+    script_thread1.join();    
     script_thread1 = threading.Thread(target=run_script, args=("C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/pythonAutomationJobs.py","C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/pythonJobs.txt","",));
     script_thread1.start();
     script_thread1.join();

@@ -5,11 +5,11 @@ from sqlalchemy import create_engine
 import pandas as pd
 import numpy as np
 import sys
-#noofjobs=sys.argv[1];
+noofjobs=sys.argv[1];
 server = "SIDNEGI\\SQLEXPRESS"
 database = "NorthWind"
 engine = create_engine('mssql+pyodbc://' + server + '/' + database + '?trusted_connection=yes&driver=SQL+Server+Native+Client+11.0')
-query = "SELECT top 5 jobname from dbo.etl_job_runs where jobstatus in ('Ready','Fail') and joborder = (select min(joborder) from dbo.etl_job_runs where jobstatus in ('Ready','Fail'));"
+query = "SELECT top "+ noofjobs + " jobname from dbo.etl_job_runs where jobstatus in ('Ready','Fail') and joborder = (select min(joborder) from dbo.etl_job_runs where jobstatus in ('Ready','Fail'));"
 connection = engine.raw_connection()
 cursor = connection.cursor()
 df = pd.read_sql(query, engine);
