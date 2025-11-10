@@ -9,8 +9,8 @@ import subprocess
 
 file_path=sys.argv[1];
 
-def run_script(script_name):
-    subprocess.run(["python", script_name]);
+def run_script(script_name, param):
+    subprocess.run(["python", script_name, param]);
 """
 with open(file_path, 'r') as file:
     file_content = file.read();
@@ -27,19 +27,19 @@ for index, item in enumerate(lines):
     print(f"Index: {index}, Item: {item}")
     if __name__ == "__main__":
         if index == 0 and item != 'null':
-            script_thread1 = threading.Thread(target=run_script, args=(item,));
+            script_thread1 = threading.Thread(target=run_script, args=(item,item));
             script_thread1.start();
         elif index == 1 and item != 'null':
-            script_thread2 = threading.Thread(target=run_script, args=(item,));
+            script_thread2 = threading.Thread(target=run_script, args=(item,item));
             script_thread2.start();
         elif index == 2 and item != 'null':
-            script_thread3 = threading.Thread(target=run_script, args=(item,));
+            script_thread3 = threading.Thread(target=run_script, args=(item,item));
             script_thread3.start();
         elif index == 3 and item != 'null':
-            script_thread4 = threading.Thread(target=run_script, args=(item,));
+            script_thread4 = threading.Thread(target=run_script, args=(item,item));
             script_thread4.start();
         elif index == 4 and item != 'null':
-            script_thread5 = threading.Thread(target=run_script, args=(item,));
+            script_thread5 = threading.Thread(target=run_script, args=(item,item));
             script_thread5.start();
         elif item == "null":
             if index==1:

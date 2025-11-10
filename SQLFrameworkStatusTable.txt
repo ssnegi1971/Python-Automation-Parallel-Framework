@@ -13,6 +13,7 @@ CREATE TABLE [dbo].[ETL_Job_Runs](
 	[JobName] [varchar](40) NULL,
 	[RunTime] [datetime] NULL,
 	[JobStatus] [varchar](20) NULL,
-	[ErrorMsg] [varchar](100) NULL
+	[ErrorMsg] [varchar](100) NULL,
+	[JobOrder] int
 ) ON [PRIMARY]
 GO
