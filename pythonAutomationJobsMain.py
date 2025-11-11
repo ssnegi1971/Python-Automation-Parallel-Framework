@@ -1,7 +1,7 @@
 import sys
 import threading
 import subprocess
-import os
+#import os
 
 #This is the main file for Python Automation Parallel Framework.
 #It invokes the python automation script.
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     script_thread1 = threading.Thread(target=run_script, args=("C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/pythonAutomationJobs.py","C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/pythonJobs.txt","",));
     script_thread1.start();
     script_thread1.join();
-    os.remove("C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/pythonJobs.txt");
+#    os.remove("C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/pythonJobs.txt");
     script_thread1 = threading.Thread(target=run_script, args=("C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/SQLAlchemyPandasPythonProcedureCheckStatus.py","","",));
     script_thread1.start();
     script_thread1.join();

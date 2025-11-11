@@ -14,9 +14,12 @@ connection = engine.raw_connection()
 cursor = connection.cursor()
 df = pd.read_sql(query, engine);
 #print (df);
+lines = [];
 for index, row in df.iterrows():
-    with open('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/pythonJobs.txt', 'a') as f:
-        print(row.jobname, file=f);
+    lines.append(row.jobname+"\n");
+print(lines);
+with open('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/pythonJobs.txt', 'w') as f:
+    f.writelines(lines);
 cursor.commit();
 cursor.close();
 query = "SELECT * from dbo.grade;"
