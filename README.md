@@ -12,7 +12,7 @@ pythonJobs.txt
 
 The process flow is as follows:
 
-The pythonAutomationJobsMain.py passes the pythonJobs.txt file as a parameter to pythonAutomationJobs.py.
+The pythonAutomationJobsMain.py fetches the jobs to be run from the database and passes them to pythonAutomationJobs.py.
 
 pythonAutomationJobs.py extracts the jobs contained in pythonJobs.txt
 
@@ -29,6 +29,7 @@ The jobs in the database repository are run in a specified job order to handle d
 The framework has been designed for 5 parrallel jobs at a time but can be expanded to more parallel jobs.
 
 Multiple Main programs can be invoked for different data sources, example warehouses.
+
 
 
 
