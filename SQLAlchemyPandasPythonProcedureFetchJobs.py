@@ -20,6 +20,7 @@ for index, row in df.iterrows():
 print(lines);
 with open('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/pythonJobs.txt', 'w') as f:
     f.writelines(lines);
+    print("null", file=f);
 cursor.commit();
 cursor.close();
 query = "SELECT * from dbo.grade;"
