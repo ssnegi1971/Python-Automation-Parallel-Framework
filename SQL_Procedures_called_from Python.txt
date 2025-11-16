@@ -31,7 +31,7 @@ CLOSE productcursor;
 DEALLOCATE productcursor;
 update dbo.etl_job_runs set runtime=GETDATE(), jobstatus='SUCCESS', errormsg = 'No error'
 where jobname = @jobname;
---insert into dbo.etl_job_runs values ('Proc_Products_Cursor',GETDATE(), 'SUCCESS', 'No Error');
+--insert into dbo.etl_job_runs values ('Proc_Products_Cursor',GETDATE(), 'Success', 'No Error');
 select * from dbo.grade;
 end;
 GO
@@ -71,7 +71,7 @@ BEGIN CATCH
         ,@err_p = ERROR_PROCEDURE()  
         ,@err_l = ERROR_LINE()  
         ,@err_msg = ERROR_MESSAGE();  
---	insert into dbo.etl_job_runs ( JobName, RunTime, JobStatus, errormsg ) values (@err_p, GETDATE(), 'FAIL', @err_msg);
+--	insert into dbo.etl_job_runs ( JobName, RunTime, JobStatus, errormsg ) values (@err_p, GETDATE(), 'Fail', @err_msg);
 update dbo.etl_job_runs set runtime=GETDATE(), jobstatus='FAIL', errormsg = @err_msg
 where jobname = @jobname;
 END CATCH;
@@ -98,7 +98,8 @@ where productid = @productid
 print 'product name ' + @productname
 if @productname='Chai'
  print 'country India'
-update dbo.etl_job_runs set runtime=GETDATE(), jobstatus='SUCCESS', errormsg = 'No error'
+update dbo.etl_job_runs set runtime=GETDATE(), jobstatus='Success', errormsg = 'No error'
 where jobname = @jobname;
 end;
+
 GO
