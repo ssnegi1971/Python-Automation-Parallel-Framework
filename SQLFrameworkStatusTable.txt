@@ -12,7 +12,7 @@ CREATE TABLE [dbo].[ETL_Job_Runs](
 	[SerialNo] [int] IDENTITY(1,1) NOT NULL,
 	[JobName] [varchar](40) NULL,
 	[RunTime] [datetime] NULL,
-	[JobStatus] [varchar](20) NULL, -- Ready, FAIL, SUCCESS status is used by framework
+	[JobStatus] [varchar](20) NULL, -- Ready, Fail, Success status is used by framework
 	[ErrorMsg] [varchar](100) NULL,
 	[JobOrder] int
 ) ON [PRIMARY]
@@ -20,4 +20,5 @@ CREATE TABLE [dbo].[ETL_Job_Runs](
 GO
 
 insert into dbo.etl_job_runs values('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/SQLAlchemyPandasPythonProcedure.py','','Ready','',1);
+
 
