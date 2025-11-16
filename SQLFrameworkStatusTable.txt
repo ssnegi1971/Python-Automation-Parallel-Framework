@@ -14,11 +14,13 @@ CREATE TABLE [dbo].[ETL_Job_Runs](
 	[RunTime] [datetime] NULL,
 	[JobStatus] [varchar](20) NULL, -- Ready, Fail, Success status is used by framework
 	[ErrorMsg] [varchar](100) NULL,
-	[JobOrder] int
+	[JobOrder] int --framework runs from min job order to max job order to cater for dependency.
 ) ON [PRIMARY]
 
 GO
 
 insert into dbo.etl_job_runs values('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/SQLAlchemyPandasPythonProcedure.py','','Ready','',1);
+insert into dbo.etl_job_runs values('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/SQLAlchemyPandasPythonProcedure2.py','','Ready','',1);
+
 
 
