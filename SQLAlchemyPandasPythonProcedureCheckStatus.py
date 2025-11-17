@@ -22,6 +22,6 @@ for index, row in df.iterrows():
         with open('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/status.txt', 'w') as f:
             print("CONTINUE", file=f);
 #            print("CONTINUE");
-    print ("Procedure Successful");
+#    print ("Procedure Successful");
 cursor.commit();
 cursor.close();
