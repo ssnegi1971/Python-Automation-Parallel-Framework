@@ -23,6 +23,6 @@ with open('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/pythonJo
     print("null", file=f);
 cursor.commit();
 cursor.close();
-query = "SELECT * from dbo.grade;"
-df = pd.read_sql(query, engine);
-print (df);
+#query = "SELECT * from dbo.grade;"
+#df = pd.read_sql(query, engine);
+#print (df);
