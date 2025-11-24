@@ -9,7 +9,7 @@ database = "NorthWind"
 engine = create_engine('mssql+pyodbc://' + server + '/' + database + '?trusted_connection=yes&driver=SQL+Server+Native+Client+11.0')
 #query = "SELECT concat(datepart(year,GETDATE()),'-',datepart(month,GETDATE()),'-',datepart(day,GETDATE())) curr_date;"
 query = "SELECT top 1 JobStatus from dbo.ETL_Job_Runs order by JobStatus asc;"
-#FAIL status will come before SUCCESS status.
+#FAIL status will come before READY, SUCCESS status.
 connection = engine.raw_connection();
 cursor = connection.cursor();
 df = pd.read_sql(query, engine);
