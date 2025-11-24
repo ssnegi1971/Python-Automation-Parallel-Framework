@@ -2,7 +2,7 @@
 
 I have written a Python Automation Parallel Framework.
 
-It is used to run python jobs, listed in a database reporsitory, in parallel. 
+It is used to run python jobs, listed in a database repository, in parallel. 
 
 It consists of the below components:
 
@@ -31,6 +31,7 @@ The jobs in the database repository are run in a specified job order to handle d
 The framework has been designed for 5 parrallel jobs at a time but can be expanded to more parallel jobs.
 
 Multiple Main programs can be invoked for different data sources, example warehouses.
+
 
 
 
