@@ -22,6 +22,8 @@ GO
 insert into dbo.etl_job_runs values('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/SQLAlchemyPandasPythonProcedure.pyw','','Ready','',1);
 insert into dbo.etl_job_runs values('C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/SQLAlchemyPandasPythonProcedure2.pyw','','Ready','',1);
 
+There are three statuses in the framework repository - Ready, FAIL, SUCCESS
+
 pip install pythonw
 
 pip install psutil
