@@ -45,7 +45,7 @@ if __name__ == "__main__":
             with open('C:/Users/Admin/Desktop/work/Python/PythonAutomation/order/status.txt', 'r') as file:
                 file_content = file.read().rstrip('\n');
                 print(file_content);
-                if file_content == 'CONTINUE':
+                if file_content == 'CONTINUE' or file_content ==  "LOAD FINISHED":
                     print("Next Task");
                 # Send email configuring your SMTP server.
     #                script_thread1 = threading.Thread(target=run_script, args=("C:/Users/ssneg/OneDrive/Desktop/work/Python/PythonAutomation/sendmailoutlook.py","ssnegi@yahoo.com","Success",));

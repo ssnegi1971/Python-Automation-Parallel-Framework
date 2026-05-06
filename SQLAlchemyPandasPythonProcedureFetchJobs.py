@@ -9,7 +9,7 @@ noofjobs=sys.argv[1];
 server = "localhost\\SQLEXPRESS"
 database = "NorthWind"
 engine = create_engine('mssql+pyodbc://' + server + '/' + database + '?trusted_connection=yes&driver=ODBC+Driver+17+for+SQL+Server')
-query = "SELECT top "+ noofjobs + " jobname from dbo.etl_job_runs where jobstatus in ('Ready','Fail') and joborder = (select min(joborder) from dbo.etl_job_runs where jobstatus in ('Ready','Fail'));"
+query = "SELECT top "+ noofjobs + " jobname from dbo.etl_job_runs where jobstatus in ('READY','FAIL') and joborder = (select min(joborder) from dbo.etl_job_runs where jobstatus in ('READY','FAIL'));"
 connection = engine.raw_connection()
 cursor = connection.cursor()
 df = pd.read_sql(query, engine);

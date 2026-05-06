@@ -11,7 +11,7 @@ GO
 create procedure [dbo].[Proc_Products_Cursor] 
 	@productid int, @jobname varchar(100) AS
 begin
-update dbo.etl_job_runs set runtime=GETDATE(), jobstatus='Running', errormsg = 'No error'
+update dbo.etl_job_runs set runtime=GETDATE(), jobstatus='RUNNING', errormsg = 'No error'
 where jobname = @jobname;
 declare @productname nvarchar(40);
 declare @result nvarchar(40);
@@ -93,7 +93,7 @@ GO
 create procedure [dbo].[Proc_Products] 
 	@productid int, @jobname varchar(200) AS
 begin
-update dbo.etl_job_runs set runtime=GETDATE(), jobstatus='Running', errormsg = 'No error'
+update dbo.etl_job_runs set runtime=GETDATE(), jobstatus='RUNNING', errormsg = 'No error'
 where jobname = @jobname;
 declare @productname nvarchar(40);
 SELECT @productname=productname

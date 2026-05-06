@@ -18,9 +18,12 @@ for index, row in df.iterrows():
     if row.JobStatus == 'FAIL':
         with open('C:/Users/Admin/Desktop/work/Python/PythonAutomation/order/status.txt', 'w') as f:
             print("FAIL", file=f);
-    else:
-        with open('C:/Users/Admin/Desktop/work/Python/PythonAutomation/order/status.txt', 'w') as f:
+    elif row.JobStatus == 'READY':
+        with open('C:/Users/Admin/Desktop/work/Python/PythonAutomation/dependency/status.txt', 'w') as f:
             print("CONTINUE", file=f);
+    else:
+        with open('C:/Users/Admin/Desktop/work/Python/PythonAutomation/dependency/status.txt', 'w') as f:
+            print("LOAD FINISHED", file=f);
 #            print("CONTINUE");
 #    print ("Procedure Successful");
 cursor.commit();
